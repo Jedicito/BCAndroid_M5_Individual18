@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">M5_Individual18</string>
+    <string name="etTexto">Ingrese Texto</string>
+    <string name="etEntero">Ingrese Entero</string>
+    <string name="etDecimal">Ingrese Decimal</string>
+    <string name="btBorrar">Borrar</string>
+    <string name="btGuardar">Guardar</string>
+</resources>
