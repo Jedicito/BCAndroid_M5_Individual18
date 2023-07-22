@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             mostrarDatos()
         }
 
+        binding.btBorrar.setOnClickListener {
+            borrarDatos()
+        }
     }
 
     private fun guardarDatos(texto: String, entero: Int, decimal: Float, boleano: Boolean) {
@@ -35,8 +38,6 @@ class MainActivity : AppCompatActivity() {
         mSharedPreferences.edit().putInt("miEntero", entero).apply()
         mSharedPreferences.edit().putFloat("miDecimal", decimal).apply()
         mSharedPreferences.edit().putBoolean("miBooleano", boleano).apply()
-
-
     }
 
     private fun mostrarDatos(){
@@ -51,5 +52,20 @@ class MainActivity : AppCompatActivity() {
         binding.tvSwitch.text = boleano.toString()
 
         binding.switch1.isChecked = boleano
+    }
+
+    private fun borrarDatos() {
+        binding.tvTexto.text = ""
+        binding.tvEntero.text = ""
+        binding.tvDecimal.text = ""
+        binding.tvSwitch.text = ""
+
+        binding.etTexto.text.clear()
+        binding.etEntero.text.clear()
+        binding.etDecimal.text.clear()
+        binding.switch1.isChecked = false
+
+        mSharedPreferences.edit().clear().apply()
+
     }
 }
