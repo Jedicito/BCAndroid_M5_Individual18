@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -11,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
-        android:layout_marginEnd="250dp"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etEntero"
         app:layout_constraintTop_toBottomOf="@+id/etEntero"
         app:layout_constraintVertical_bias="0.08" />
@@ -38,12 +39,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="116dp"
         android:ems="10"
         android:hint="@string/etTexto"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvEntero"
         app:layout_constraintTop_toBottomOf="@+id/tvEntero" />
 
@@ -52,9 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="268dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etTexto"
         app:layout_constraintTop_toBottomOf="@+id/etTexto" />
 
@@ -65,6 +66,8 @@
         android:layout_marginTop="24dp"
         android:minHeight="48dp"
         android:text="Switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvTexto"
         app:layout_constraintTop_toBottomOf="@+id/tvTexto" />
 
@@ -73,12 +76,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="116dp"
         android:ems="10"
         android:hint="@string/etDecimal"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/switch1"
         app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
@@ -87,9 +90,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="267dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/etDecimal"
         app:layout_constraintTop_toBottomOf="@+id/etDecimal" />
 
@@ -97,21 +100,23 @@
         android:id="@+id/btBorrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="52dp"
+        android:backgroundTint="#D1782B"
         android:minHeight="48dp"
         android:text="@string/btBorrar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDecimal" />
+        app:layout_constraintStart_toEndOf="@+id/btGuardar"
+        app:layout_constraintTop_toTopOf="@+id/btGuardar" />
 
     <Button
         android:id="@+id/btGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="#5BA82F"
         android:minHeight="48dp"
         android:text="@string/btGuardar"
-        app:layout_constraintStart_toEndOf="@+id/btBorrar"
-        app:layout_constraintTop_toTopOf="@+id/btBorrar" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDecimal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
